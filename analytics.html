@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <title>resaults</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
+    <div id="loading" style="display: none;">
+      <img src="image/gif.gif" alt="Loading" />
+  </div>
+  
+    <div class="navbar">
+        <div class="back-button">
+         
+          
+         <a href="/index.html"><i class="fa fa-arrow-left" style="font-size: 1em;"></i> <b>رجوع</b> </a>
+        </div>
+        <div class="title">
+            تحليل المشاعر
+        </div>
+      </div>
+    <!--card layout start-->
+    
+    <div class="container">
+        <div class="row">
+            <div class="card-02" style="width: 500px;">
+                <div class="chart-container" style="width: 250px;">
+                  <canvas id="lineChart"></canvas>
+                </div>
+              </div>
+             
+          
+			<a href="">		
+			<div class="card-01" style=" background: linear-gradient(to right, #ffa288, rgb(255, 200, 203));">
+                <div class="hover-square-01"></div>
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/one.png">
+					</a>
+				
+					
+				</div>
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text" dir="rtl">نسبة المشاعر السلبية</div>
+			</div>
+		</a>
+        <a href="">
+			<div class="card-01" style=" background: linear-gradient(to right, #8ec7ef, rgb(152, 228, 255));">
+                <div class="hover-square-02"></div>
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/two.png">
+					</a>
+						
+
+				</div>	
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text" dir="rtl">نسبة المشاعر المحايدة</div>
+			</div>	
+			</a>
+            
+            <a href="">
+            <div class="card-01" style=" background: linear-gradient(to right, #86e49d, #b2fec5);">
+			<!-- <div class="card-01" style="  background-image: url('image/html_table.jpg');background-size: cover;"> -->
+                <div class="hover-square-03"></div>
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/three.png">
+					</a>
+                    
+				</div>	
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="box"><span></span></div>
+                  </div>
+                  <div class="text" dir="rtl">نسبة المشاعر الإيجابية</div>
+             </div>	
+            </a>
+           
+                
+            
+			
+        </div>		
+		</div>	
+
+      <div class="row">
+        <div class="card-02">
+            <div class="chart-container">
+              <canvas id="barChart"width="500" height="300"></canvas>
+            </div>
+          </div>
+          <div class="card-02">
+            <div class="chart-container">
+              <canvas id="pieChart" width="500" height="300"></canvas>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="card-03" id="bgt">
+           
+                <section class="table__header">
+                    <div class="export__file">
+                        <label for="export-file" class="export__file-btn" title="Export File"></label>
+                        <input type="checkbox" id="export-file">
+                        <div class="export__file-options">
+                            <label>Export As &nbsp; &#10140;</label>
+                            <label for="export-file" id="toPDF">PDF <img src="image/pdf.png" alt=""></label>
+                            <label for="export-file" id="toJSON">JSON <img src="image/json.png" alt=""></label>
+                            <label for="export-file" id="toCSV">CSV <img src="image/csv.png" alt=""></label>
+                            <label for="export-file" id="toEXCEL">EXCEL <img src="image/excel.png" alt=""></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <img src="image/search.png" alt="">
+                        <input type="search" placeholder="ابحث هنا…" dir="rtl">
+                    </div>
+                    
+                    <h1>أشهر التغريدات حول الموضوع المقترح</h1>
+
+                </section>
+                <section class="table__body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- and here display if its positif or negatif -->
+                                <th> الحالة <span class="icon-arrow">&UpArrow;</span></th>
+                                <!-- here the recent_titles -->
+                                <th> الدقة<span class="icon-arrow">&UpArrow;</span></th>
+                                <th> التغريدة <span class="icon-arrow">&UpArrow;</span></th>
+                                <!-- here the  title_ratings -->
+                                <th> المستخدم <span class="icon-arrow">&UpArrow;</span></th>
+                                <!-- here ordred numbers start from  -->
+                                <th> #<span class="icon-arrow">&UpArrow;</span></th>
+                                
+                                
+                               
+                                
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <!-- This will be filled dynamically -->
+                      </tbody>
+                    </table>
+                </section>
+                
+        </div>
+      </div>
+    </div>
+<script src="script.js"></script>
+ <!-- ***************************** -->
+<!-- dork hdok t3 analytics ytbdlo hna fl js si possible -->
+ <!-- ***************************** -->
+
+  
+     
+    <!--card layout end-->
+
+  </body>
+</html>
+      

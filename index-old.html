@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل المشاعر</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <h1>تحليل المشاعر</h1>
+        <img src="(Arabic).png" alt="">
+        <div class="input-container">
+            <input type="text" id="query" placeholder="أدخل الكلمة للبحث" required>
+            <input type="number" id="num-posts" min="1" max="100" placeholder="عدد المنشورات" value="10">
+        </div>
+        <div class="button-container">
+            <button id="analyze-btn">تحليل</button>
+            <button id="clear-btn">مسح المحتوى</button>
+        </div>
+        <div id="loader" class="loader" style="display: none;">جاري التحليل...</div>
+        <div id="title-ratings" class="title-ratings-container">
+        </div>
+        <div id="total-rating" class="total-rating-container">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
